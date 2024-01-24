@@ -8,22 +8,44 @@ namespace WordFilter
 {
     internal class DataController
     {
-        public DataController() 
-        { 
-            foreach(int index in Data.NumberOfLetters)
+        private static Data data = new Data();
+        
+        public static void StartFactoryFunction()
+        {
+            foreach (int index in data.NumberOfLetters)
             {
-                Data.NewWordList.Add(index, new List<string>());
+                data.NewWordList.Add(index, new List<string>());
             }
         }
 
+
+
         public static void AddIntToNumberOfLettersList(int number)
         {
-            Data.NumberOfLetters.Add(number);
+            data.NumberOfLetters.Add(number);
         }
 
         public static void AddWordToNewWordList(string word)
         {
-            Data.NewWordList[word.Length].Add(word);
+            data.NewWordList[word.Length].Add(word);
+        }
+        
+        public static List<int> GetNumberOfLettersList()
+        {
+            return data.NumberOfLetters;
+        }
+        public static string GetMainWordListFilePath()
+        {
+            return data.MainWordListTxtFilePath;
+        }
+
+        public static string GetExportWordListFilePath()
+        {
+            return data.ExportWordListPath;
+        }
+        public static Dictionary<int,List<string>> GetNewWordListDictionary()
+        {
+            return data.NewWordList;
         }
     }
 }

@@ -12,7 +12,7 @@ namespace WordFilter
         {
             foreach (string word in OldWordList)
             {
-                if(Data.NumberOfLetters.Contains(word.Length))
+                if(DataController.GetNumberOfLettersList().Contains(word.Length))
                 {
                     DataController.AddWordToNewWordList(word);
                 }

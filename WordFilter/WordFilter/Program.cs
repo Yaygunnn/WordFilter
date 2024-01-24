@@ -5,15 +5,18 @@ namespace WordFilter
     internal class Program
     {
         static List<string> WordList = new List<string>();
-        static DataController dataController;
+        
         static void Main(string[] args)
         {
             DataController.AddIntToNumberOfLettersList(5);
 
-            dataController = new DataController();
-            WordList = TxtFileReader.ConvertTxtFileToList(Data.MainWordListTxtFilePath);
+            DataController.StartFactoryFunction();
+
+            
+            WordList = TxtFileReader.ConvertTxtFileToList(DataController.GetMainWordListFilePath());
             LetterNumberLimiter.LimitNumberOfLettersAndSetNewWorldList(WordList);
-            TxtFileWriter.WriteTxtFile(Data.ExportWordListPath, Data.NewWordList[Data.NumberOfLetters[0]]);
+            TxtFileWriter.WriteTxtFile(DataController.GetExportWordListFilePath(), DataController.GetNewWordListDictionary()
+                [DataController.GetNumberOfLettersList()[0]]);
         }
     }
 }
