@@ -1,11 +1,13 @@
 ﻿using System;
 
-namespace WordFilter // Note: actual namespace depends on the project name.
+namespace WordFilter 
 {
     internal class Program
     {
+        static List<string> WordList = new List<string>();
         static void Main(string[] args)
         {
+            WordList = TxtFileReader.ConvertTxtFileToList(Data.MainWordListTxtFilePath);
             
         }
     }
