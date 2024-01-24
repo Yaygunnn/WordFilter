@@ -8,7 +8,7 @@ namespace WordFilter
         static void Main(string[] args)
         {
             WordList = TxtFileReader.ConvertTxtFileToList(Data.MainWordListTxtFilePath);
-            
+            TxtFileWriter.WriteTxtFile(Data.ExportWordListPath, WordList);
         }
     }
 }
