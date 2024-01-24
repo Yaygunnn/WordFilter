@@ -12,5 +12,9 @@ namespace WordFilter
         // paste here the original word list file path.
 
         public static string ExportWordListPath = "C:/Benimkiler/TxtFiles/Words.txt";
+
+        public static List<int> NumberOfLetters = new List<int>(); 
+
+        public static Dictionary<int,List<string>> NewWordList = new Dictionary<int,List<string>>();
     }
 }
