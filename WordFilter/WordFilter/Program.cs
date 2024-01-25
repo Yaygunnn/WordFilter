@@ -8,7 +8,10 @@ namespace WordFilter
         
         static void Main(string[] args)
         {
+            DataController.AddIntToNumberOfLettersList(4);
             DataController.AddIntToNumberOfLettersList(5);
+            DataController.AddIntToNumberOfLettersList(6);
+
 
             DataController.StartFactoryFunction();
 
@@ -20,8 +23,7 @@ namespace WordFilter
             CharLimiter.LimitCharartersOfWords();
 
 
-            TxtFileWriter.WriteTxtFile(DataController.GetExportWordListFilePath(), DataController.GetNewWordListDictionary()
-                [DataController.GetNumberOfLettersList()[0]]);
+            TxtFileWriter.WriteTxtFile();
         }
     }
 }

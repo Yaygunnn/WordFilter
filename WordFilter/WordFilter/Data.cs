@@ -8,10 +8,8 @@ namespace WordFilter
 {
     internal class Data
     {
-        public  string MainWordListTxtFilePath = "C:/Benimkiler/Github Projects/WordFilter/WordFilter/WordFilter/bin/Debug/net8.0/MainWordList.txt";
+        public  string MainWordListTxtFilePath ="C:/Benimkiler/TxtFiles/MainWordList.txt";
         // paste here the original word list file path.
-
-        public  string ExportWordListPath = "C:/Benimkiler/TxtFiles/Words.txt";
 
         public  List<int> NumberOfLetters = new List<int>();
 

@@ -39,10 +39,6 @@ namespace WordFilter
             return data.MainWordListTxtFilePath;
         }
 
-        public static string GetExportWordListFilePath()
-        {
-            return data.ExportWordListPath;
-        }
         public static Dictionary<int,List<string>> GetNewWordListDictionary()
         {
             return data.NewWordList;
