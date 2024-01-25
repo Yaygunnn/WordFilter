@@ -15,6 +15,12 @@ namespace WordFilter
             
             WordList = TxtFileReader.ConvertTxtFileToList(DataController.GetMainWordListFilePath());
             LetterNumberLimiter.LimitNumberOfLettersAndSetNewWorldList(WordList);
+
+            string TurkishAlphabet = "abcçdefgğhıijklmnoöprsştuüvyz";
+            DataController.SetWantedCharacters(TurkishAlphabet);
+            CharLimiter.LimitCharartersOfWords();
+
+
             TxtFileWriter.WriteTxtFile(DataController.GetExportWordListFilePath(), DataController.GetNewWordListDictionary()
                 [DataController.GetNumberOfLettersList()[0]]);
         }

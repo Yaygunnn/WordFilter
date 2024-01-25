@@ -47,5 +47,29 @@ namespace WordFilter
         {
             return data.NewWordList;
         }
+
+        public static void RemoveWords(List<string> wordList)
+        {
+            foreach (string word in wordList)
+            {
+                data.NewWordList[word.Length].Remove(word);
+            }
+        }
+
+        public static void SetWantedCharacters(string alphabet)
+        {
+            foreach (char c in alphabet)
+            {
+                if (!data.WantedCharacters.Contains(c))
+                {
+                    data.WantedCharacters.Add(c);
+                }
+            }
+        }
+
+        public static List<Char> GetWantedCharacters() 
+        { 
+            return data.WantedCharacters; 
+        }
     }
 }

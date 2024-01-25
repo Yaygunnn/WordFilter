@@ -16,5 +16,7 @@ namespace WordFilter
         public  List<int> NumberOfLetters = new List<int>(); 
 
         public  Dictionary<int,List<string>> NewWordList = new Dictionary<int,List<string>>();
+    
+        public List<char> WantedCharacters = new List<char>();
     }
 }
