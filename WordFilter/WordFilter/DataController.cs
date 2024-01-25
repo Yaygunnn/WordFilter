@@ -58,16 +58,10 @@ namespace WordFilter
 
         public static void SetWantedCharacters(string alphabet)
         {
-            foreach (char c in alphabet)
-            {
-                if (!data.WantedCharacters.Contains(c))
-                {
-                    data.WantedCharacters.Add(c);
-                }
-            }
+            data.WantedCharacters = alphabet;
         }
 
-        public static List<Char> GetWantedCharacters() 
+        public static string GetWantedCharacters() 
         { 
             return data.WantedCharacters; 
         }

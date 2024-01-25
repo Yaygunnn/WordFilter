@@ -13,10 +13,13 @@ namespace WordFilter
 
         public  string ExportWordListPath = "C:/Benimkiler/TxtFiles/Words.txt";
 
-        public  List<int> NumberOfLetters = new List<int>(); 
+        public  List<int> NumberOfLetters = new List<int>();
+
+        public string WantedCharacters = "abcçdefgğhıijklmnoöprsştuüvyz";
 
         public  Dictionary<int,List<string>> NewWordList = new Dictionary<int,List<string>>();
     
-        public List<char> WantedCharacters = new List<char>();
+        
+
     }
 }

@@ -16,8 +16,7 @@ namespace WordFilter
             WordList = TxtFileReader.ConvertTxtFileToList(DataController.GetMainWordListFilePath());
             LetterNumberLimiter.LimitNumberOfLettersAndSetNewWorldList(WordList);
 
-            string TurkishAlphabet = "abcçdefgğhıijklmnoöprsştuüvyz";
-            DataController.SetWantedCharacters(TurkishAlphabet);
+            
             CharLimiter.LimitCharartersOfWords();
 
 
