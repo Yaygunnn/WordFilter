@@ -34,7 +34,15 @@ namespace WordFilter
         public static List<string> TryToReachFilePath(string FilePath)
         {
             string NameOfTxtFile = "/MainWordList.txt";
-            return ConvertTxtFileToList(FilePath+NameOfTxtFile);
+
+            List<string> WordList = ConvertTxtFileToList(FilePath + NameOfTxtFile);
+
+            if(WordList.Count > 0 )
+            {
+                DataController.SetMainWordListFilePath(FilePath + NameOfTxtFile);
+            }
+
+            return WordList;
         }
     }
 }

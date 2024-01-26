@@ -61,5 +61,11 @@ namespace WordFilter
         { 
             return data.WantedCharacters; 
         }
+
+        public static void SetMainWordListFilePath(string filePath)
+        {
+            data.MainWordListTxtFilePath = filePath;
+        }
+
     }
 }
