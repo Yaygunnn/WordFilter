@@ -22,15 +22,39 @@ namespace WordFilter
 
             }
 
+            while(true)
+            {
+                Console.Clear();
 
-            DataController.AddIntToNumberOfLettersList(4);
-            DataController.AddIntToNumberOfLettersList(5);
-            DataController.AddIntToNumberOfLettersList(6);
+                Console.Write(PrintTexts.WantedLetterNumbers);
 
+                foreach(int letternumber in DataController.GetNumberOfLettersList())
+                {
+                    Console.Write(letternumber + " ");
+                }
+                Console.WriteLine();
+                Console.WriteLine(PrintTexts.PleaseEnterNumber);
+                Console.WriteLine(PrintTexts.ToContinuePress);
 
-            DataController.StartFactoryFunction();
+                string UserInput=Console.ReadLine();
+                
+                if(UserInput == "C" || UserInput == "c" ) 
+                {
+                    DataController.StartFactoryFunction();
+                    Console.Clear();
+                    break;
+                }
 
-            
+                try 
+                { 
+                    int number = Convert.ToInt32(UserInput);
+                    DataController.AddIntToNumberOfLettersList(number);
+                } catch (FormatException)
+                {
+                    Console.WriteLine(PrintTexts.WrongEntry);
+                }
+            }
+           
             
             LetterNumberLimiter.LimitNumberOfLettersAndSetNewWorldList(WordList);
 

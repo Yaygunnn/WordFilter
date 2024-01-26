@@ -12,6 +12,12 @@ namespace WordFilter
 
         public static string PleaseEnterFilePath = "Please Enter File path\n Name of the txt file must be MainWordList";
 
+        public static string WantedLetterNumbers = "Wanted letter numbers for words are : ";
 
+        public static string PleaseEnterNumber = "Enter a wanted letter number and press 'Enter'";
+
+        public static string ToContinuePress = "To continue Press 'C' and press 'Enter'";
+
+        public static string WrongEntry = "Wrong input type again";
     }
 }
