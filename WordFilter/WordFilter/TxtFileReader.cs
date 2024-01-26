@@ -29,5 +29,12 @@ namespace WordFilter
 
             return WordList;
         }
+
+
+        public static List<string> TryToReachFilePath(string FilePath)
+        {
+            string NameOfTxtFile = "/MainWordList.txt";
+            return ConvertTxtFileToList(FilePath+NameOfTxtFile);
+        }
     }
 }
