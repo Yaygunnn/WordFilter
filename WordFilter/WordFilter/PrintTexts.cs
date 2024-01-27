@@ -23,5 +23,9 @@ namespace WordFilter
         public static string DoYouWantToLimitCharacters = "Would you like to limit characters";
 
         public static string YesOrNo = "Press 'Y' for yes and 'N' for no";
+
+        public static string CurrentLimitCharacter = "Would you like to limit characters with alphabet below";
+
+        public static string TypeNewAlphabet = "Please type new alphabet, all small letters";
     }
 }

@@ -20,6 +20,7 @@ namespace WordFilter
                 }
 
                 ConsoleKeyInfo input = Console.ReadKey();
+                Console.Write("\b");
 
                 if(input.Key == ConsoleKey.Y)
                 {

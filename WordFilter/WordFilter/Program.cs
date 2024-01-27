@@ -59,7 +59,20 @@ namespace WordFilter
             
             if (InputKeyCheck.TypeYesOrNo(PrintTexts.DoYouWantToLimitCharacters, PrintTexts.YesOrNo))
             {
-                CharLimiter.LimitCharartersOfWords();
+                while (true)
+                {
+                    if (InputKeyCheck.TypeYesOrNo(PrintTexts.CurrentLimitCharacter, DataController.GetWantedCharacters(), PrintTexts.YesOrNo))
+                    {
+                        CharLimiter.LimitCharartersOfWords();
+                        break;
+                    }
+                    else
+                    {
+                        Console.WriteLine(PrintTexts.TypeNewAlphabet);
+                        DataController.SetWantedCharacters(Console.ReadLine());
+                    }
+                }
+               
 
             }
             
