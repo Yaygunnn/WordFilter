@@ -54,12 +54,17 @@ namespace WordFilter
                     Console.WriteLine(PrintTexts.WrongEntry);
                 }
             }
-           
-            
+
             LetterNumberLimiter.LimitNumberOfLettersAndSetNewWorldList(WordList);
+            
+            if (InputKeyCheck.TypeYesOrNo(PrintTexts.DoYouWantToLimitCharacters, PrintTexts.YesOrNo))
+            {
+                CharLimiter.LimitCharartersOfWords();
+
+            }
+            
 
             
-            CharLimiter.LimitCharartersOfWords();
 
 
             TxtFileWriter.WriteTxtFile();

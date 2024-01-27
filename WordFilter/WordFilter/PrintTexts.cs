@@ -19,5 +19,9 @@ namespace WordFilter
         public static string ToContinuePress = "To continue Press 'C' and press 'Enter'";
 
         public static string WrongEntry = "Wrong input type again";
+
+        public static string DoYouWantToLimitCharacters = "Would you like to limit characters";
+
+        public static string YesOrNo = "Press 'Y' for yes and 'N' for no";
     }
 }
